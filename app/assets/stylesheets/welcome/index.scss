@@ -1,0 +1,26 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.index {
+
+        > section {
+          margin: $header-height auto 16px;
+          padding-top: 16px;
+
+          > header {
+            font-size: $big-ass-title;
+          }
+
+          > section {
+            padding: 40px 0;
+          }
+        }
+      }
+    }
+  }
+}

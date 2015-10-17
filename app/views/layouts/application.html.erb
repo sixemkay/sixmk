@@ -1,14 +1,56 @@
 <!DOCTYPE html>
+
+<!--  
+sixmk, design + print needs fullfilled
+-->
+
+<%# 
+Welcome. With th exception of the above, all comments
+in these files will be rails comments, not HTML comments.
+If you're truly curious you're in luck, this site is
+open source, you may view all the raw code here: 
+https://github.com/sixemkay/sixmk
+%>
+
 <html>
-<head>
-  <title>Sixmk</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <head>
+    
+    <title>sixMK design + print | Graphic Design, Print, and more</title>
 
-</body>
+    <%# stylesheets %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:300,300italic' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    
+    <%# scripts %>
+    <%= javascript_include_tag 'application' %>
+    
+    <%# cross-site request forgery protection.  word. %>
+    <%= csrf_meta_tags %>
+
+    <%# let's give ourselves a chance to look good on a phone %>
+    <meta name="viewport" content="width=device-width">
+  
+  </head>
+  
+
+  <body class="sixmk">
+
+    <%= render partial: "shared/site_header" %>
+    
+    <section class="page-container <%= yield(:class) if content_for?(:class) %>">
+      <%= yield %>
+    </section>
+
+    <%= render partial: "shared/site_footer" %>
+
+  </body>
+
+
+  <%# Google Analytics %>
+  <% if Rails.env.production? %>
+    <%# TODO %>
+  <% end %>
+  
+
 </html>
