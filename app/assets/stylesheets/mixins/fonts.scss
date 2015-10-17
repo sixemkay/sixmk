@@ -8,6 +8,10 @@ $small: 14px;
 $smaller: 12px;
 $smallest: 10px;
 
-@mixin font-roboto {
+@mixin font-copy {
   font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-brand {
+  font-family: 'Copse', serif;
 }

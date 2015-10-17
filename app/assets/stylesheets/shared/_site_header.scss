@@ -34,12 +34,15 @@ body {
         > header {
           font-size: $big-ass-title;
           padding-left: 16px;
-          width: 50%;
+          width: 20%;
 
           @media (max-width: 64em) { font-size: $large; }
 
           > a {
             color: $font-black;
+            text-decoration: none;
+
+            @include font-brand;
 
             > span {
               color: $font-brand;
@@ -50,7 +53,7 @@ body {
         > footer {
           height: 100%;
           text-align: right;
-          width: 48%;
+          width: 75%;
 
           > a {
             margin-left: 12px;
