@@ -6,7 +6,7 @@ body {
 
     > div.site-footer {
       background-color: $background-tertiary;
-      border-top: 1px solid $border-black;
+      border-top: 1px solid $border-gray;
       color: $font-white;
       min-height: 200px;
       width: 100%;
@@ -22,7 +22,7 @@ body {
         @media (min-width: 78.125em) { width: 78.125em; }
 
         > header {
-          
+
         }
 
         > footer {

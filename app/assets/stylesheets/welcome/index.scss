@@ -7,17 +7,44 @@ body {
     > section.page-container {
       
       &.welcome.index {
+        position: relative;
+
+        > div {
+          background-color: $background-primary;
+          height: 380px;
+          left: 0;
+          margin: $header-height auto 0;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          z-index: $z-negative;
+        }
 
         > section {
-          margin: $header-height auto 16px;
-          padding-top: 16px;
-
-          > header {
-            font-size: $big-ass-title;
-          }
+          margin-top: 380px; // must match height on div up there
+          width: 100%;
 
           > section {
-            padding: 40px 0;
+            padding: 20px;
+            min-height: 420px;
+            width: 100%;
+            width: calc(100% - 40px);
+
+            &.about {
+              background-color: $background-primary;
+            }
+
+            &.testimonials {
+              background-color: $background-secondary;
+            }
+
+            &.portfolio {
+              background-color: $background-tertiary;
+            }
+
+            &.schedule {
+              background-color: $background-black;
+            }
           }
         }
       }

@@ -23,10 +23,17 @@ ul {
 
 a {
   color: $font-link;
+  text-decoration: none;
 
   &:active,
   &:hover {
-    color: $font-link;
+    color: $font-link-active;
+    text-shadow: 1px 1px 1px inset $font-link;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $font-brand;
   }
   
   &:visited {

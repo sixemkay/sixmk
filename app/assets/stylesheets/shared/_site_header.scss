@@ -52,11 +52,69 @@ body {
 
         > footer {
           height: 100%;
+          font-size: $small;
           text-align: right;
           width: 75%;
 
-          > a {
-            margin-left: 12px;
+          > ul {
+
+            > li {
+              display: inline-block;
+              min-height: 34px;
+              padding: 0 10px;
+
+              > a,
+              > ul > li > a {
+                margin-left: 16px;
+
+                &.primary {
+                  font-weight: bold;
+                }
+              }
+
+              &.sub-menu {
+
+                > ul {
+                  position: relative;
+                  
+                  > li {
+
+                    > ul {
+                      background-color: $background-primary;
+                      border-left: 1px solid $border-gray;
+                      border-top: 1px solid $border-gray;
+                      display: none;
+                      position: absolute;
+                      top: 34px;
+                      width: 200px;
+
+                      @include header-shadow;
+
+                      > li {
+                        border-bottom: 1px solid $border-gray;
+                        padding: 12px;
+                        text-align: left;
+
+                        &:last-child {
+                          border-bottom: none;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &:hover {
+
+                  > ul > li > ul {
+                    display: block;
+
+                    &:hover {
+                      display: block;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
