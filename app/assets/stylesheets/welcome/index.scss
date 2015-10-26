@@ -37,18 +37,31 @@ body {
             width: 100%;
             width: calc(100% - 40px);
 
-            > header {
-              font-size: $smallest;
+            a {
+              color: $font-brand;
+              text-decoration: underline;
+              transition: all 0.2s;
+
+              &:hover {
+                font-size: $large;
+              }
+            }
+
+            > header,
+            > footer {
               text-align: right;
               width: 100%;
             }
 
-            > ul {
+            > header {
+              font-size: $smallest;
+            }
 
-              a {
-                color: $font-brand;
-                text-decoration: underline;
-              }
+            > footer {
+              font-size: $small;
+            }
+
+            > ul {
 
               > li {
                 padding-bottom: 36px;
@@ -90,10 +103,56 @@ body {
 
             &.portfolio {
               background-color: $background-tertiary;
+              color: $font-white;
+
+              a {
+                color: $font-white;
+              }
+
+              > div.slideshow {
+                height: 420px;
+                position: relative;
+                overflow: hidden;
+
+                > div {
+                  position: absolute;
+                  background: asset-data-url("portfolio_crawl_v0");
+                  height: 100%;
+                  left: 0;
+                  top: 0;
+                  width: 3660px;
+                  
+                  -moz-animation: slideshow 42s linear infinite;
+
+                  -webkit-animation: slideshow 42s linear infinite;
+                  -webkit-transform: translate3d(0, 0, 0);
+                }
+
+                @-webkit-keyframes slideshow {
+                  0% { 
+                    -webkit-transform: translateX(0);  
+                  } 
+
+                  100% { 
+                    -webkit-transform: translateX(-2720px);  
+                  }
+                }
+
+                @-moz-keyframes slideshow {
+                  0% { 
+                    -moz-transform: translateX(0); 
+                  }    
+                    
+                  100% { 
+                    -moz-transform: translateX(-2720px); 
+                  }
+                }
+              }
             }
 
             &.schedule {
               background-color: $background-black;
+              color: $font-white;
             }
           }
         }
