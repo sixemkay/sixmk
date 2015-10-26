@@ -1,0 +1,4 @@
+@mixin site-width {
+  @media (max-width: 979px) { width: 100%; }
+  @media (min-width: 980px) { width: 980px; }
+}

@@ -9,19 +9,26 @@ body {
       &.welcome.index {
         position: relative;
 
-        > div {
+        > ul {
           background-color: $background-primary;
           height: 380px;
-          left: 0;
-          margin: $header-height auto 0;
+          margin: 0 auto;
+          overflow: hidden;
           position: fixed;
-          top: 0;
-          width: 100%;
+          top: $header-height;
           z-index: $z-negative;
+
+          @include site-width;
+
+          > li {
+            display: inline-block;
+            vertical-align: top;
+          }
         }
 
         > section {
-          margin-top: 380px; // must match height on div up there
+          border-top: 1px solid $border-brand;
+          margin-top: 400px; // must match height on ul up there plus any additional buffer
           width: 100%;
 
           > section {

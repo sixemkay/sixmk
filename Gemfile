@@ -25,6 +25,9 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+# Make Rails controller data directly available in Coffeescript and Javascript.
+gem 'gon'
+
 # Use puma as the app server
 gem 'puma'
 

@@ -12,17 +12,20 @@ open source, you may view all the raw code here:
 https://github.com/sixemkay/sixmk
 %>
 
-<html>
+<html ng-app="sixmkApp">
 
   <head>
     
     <title>sixMK design + print | Graphic Design, Print, and more</title>
 
     <%# stylesheets %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Roboto:300,300italic|Copse' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     
     <%# scripts %>
+    <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' %>
+    <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js' %>
     <%= javascript_include_tag 'application' %>
     
     <%# cross-site request forgery protection.  word. %>
@@ -34,7 +37,8 @@ https://github.com/sixemkay/sixmk
   </head>
   
 
-  <body class="sixmk">
+  <body class="sixmk" ng-controller="SiteController" ng-init="initialize()" ng-cloak>
+    <%= include_gon %>
 
     <%= render partial: "shared/site_header" %>
     
