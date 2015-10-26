@@ -33,15 +33,58 @@ body {
 
           > section {
             padding: 20px;
-            min-height: 420px;
+            min-height: 200px;
             width: 100%;
             width: calc(100% - 40px);
+
+            > header {
+              font-size: $smallest;
+              text-align: right;
+              width: 100%;
+            }
+
+            > ul {
+
+              a {
+                color: $font-brand;
+                text-decoration: underline;
+              }
+
+              > li {
+                padding-bottom: 36px;
+
+                &:last-child {
+                  padding-bottom: 4px;
+                }
+
+                > section {
+
+                  > header {
+                    font-size: $largest;
+                    font-weight: bold;
+                    padding-bottom: 16px;
+                  }
+
+                  > ul {
+
+                    > li {
+                      padding-bottom: 12px;
+
+                      &.emphazie {
+                        font-size: $larger;
+                        font-style: oblique;
+                      }
+                    }
+                  }
+                }
+              }
+            }
 
             &.about {
               background-color: $background-primary;
             }
 
-            &.testimonials {
+            &.how-it-works {
               background-color: $background-secondary;
             }
 

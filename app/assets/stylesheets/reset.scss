@@ -21,7 +21,8 @@ ul {
   padding: 0;
 }
 
-a {
+a,
+span.link {
   color: $font-link;
   text-decoration: none;
 

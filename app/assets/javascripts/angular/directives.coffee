@@ -1,3 +1,3 @@
 'use strict'
 
-angular.module("sixmkApp.directives", [])
+angular.module("sixmkApp.directives", [ "smoothScroll" ])
