@@ -1,10 +1,21 @@
 <% content_for(:class) { "welcome index" } %>
 
 <%# scrolling hero section %>
-<%# TODO: that, mvp is just an image %>
 <ul>
   <li>
-    <%= image_tag "servicesSliderIMG.gif", alt: "We have the services you need!" %>
+    <section id="portfolio" class="portfolio">
+      <header>
+        PORTFOLIO
+      </header>
+      <div class="slideshow">
+        <div>
+          These cool works and so much more!
+        </div>
+      </div>
+      <footer>
+        <a href="#">see more</a>
+      </footer>
+    </section>
   </li>
 </ul>
 
@@ -98,19 +109,9 @@
     </ul>
   </section>
 
-  <%# portfolio section %>
-  <section id="portfolio" class="portfolio">
-    <header>
-      PORTFOLIO
-    </header>
-    <div class="slideshow">
-      <div>
-        These cool works and so much more!
-      </div>
-    </div>
-    <footer>
-      <a href="#">see more</a>
-    </footer>
+  <%# tag line %>
+  <section class="tag-line">
+    <%= image_tag "services", alt: "We have the services you need!" %>
   </section>
 
   <%# schedule an apointment %>

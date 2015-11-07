@@ -11,11 +11,12 @@ body {
 
         > ul {
           background-color: $background-primary;
-          height: 380px;
+          height: 420px;
           margin: 0 auto;
           overflow: hidden;
           position: fixed;
           top: $header-height;
+          width: 100%;
           z-index: $z-negative;
 
           @include site-width;
@@ -23,12 +24,62 @@ body {
           > li {
             display: inline-block;
             vertical-align: top;
+            width: 100%;
+
+            > section {
+              color: $font-black;
+
+              > header {
+                font-size: $smallest;
+                text-align: right;
+              }
+
+              > div.slideshow {
+                height: 420px;
+                position: relative;
+                overflow: hidden;
+
+                > div {
+                  position: absolute;
+                  background: asset-data-url("portfolio_crawl_v0");
+                  height: 100%;
+                  left: 0;
+                  top: 0;
+                  width: 3660px;
+                  
+                  -moz-animation: slideshow 42s linear infinite;
+
+                  -webkit-animation: slideshow 42s linear infinite;
+                  -webkit-transform: translate3d(0, 0, 0);
+                }
+
+                @-webkit-keyframes slideshow {
+                  0% { 
+                    -webkit-transform: translateX(0);  
+                  } 
+
+                  100% { 
+                    -webkit-transform: translateX(-2720px);  
+                  }
+                }
+
+                @-moz-keyframes slideshow {
+                  0% { 
+                    -moz-transform: translateX(0); 
+                  }    
+                    
+                  100% { 
+                    -moz-transform: translateX(-2720px); 
+                  }
+                }
+              }
+            }
           }
         }
 
         > section {
           border-top: 1px solid $border-brand;
-          margin-top: 400px; // must match height on ul up there plus any additional buffer
+          margin-top: 440px; // must match height on ul up there plus any additional buffer
           width: 100%;
 
           > section {
@@ -101,53 +152,8 @@ body {
               background-color: $background-secondary;
             }
 
-            &.portfolio {
+            &.tag-line {
               background-color: $background-tertiary;
-              color: $font-white;
-
-              a {
-                color: $font-white;
-              }
-
-              > div.slideshow {
-                height: 420px;
-                position: relative;
-                overflow: hidden;
-
-                > div {
-                  position: absolute;
-                  background: asset-data-url("portfolio_crawl_v0");
-                  height: 100%;
-                  left: 0;
-                  top: 0;
-                  width: 3660px;
-                  
-                  -moz-animation: slideshow 42s linear infinite;
-
-                  -webkit-animation: slideshow 42s linear infinite;
-                  -webkit-transform: translate3d(0, 0, 0);
-                }
-
-                @-webkit-keyframes slideshow {
-                  0% { 
-                    -webkit-transform: translateX(0);  
-                  } 
-
-                  100% { 
-                    -webkit-transform: translateX(-2720px);  
-                  }
-                }
-
-                @-moz-keyframes slideshow {
-                  0% { 
-                    -moz-transform: translateX(0); 
-                  }    
-                    
-                  100% { 
-                    -moz-transform: translateX(-2720px); 
-                  }
-                }
-              }
             }
 
             &.schedule {
