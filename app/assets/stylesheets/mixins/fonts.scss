@@ -8,10 +8,14 @@ $small: 14px;
 $smaller: 12px;
 $smallest: 10px;
 
+@mixin font-brand {
+  font-family: 'Copse', serif;
+}
+
 @mixin font-copy {
   font-family: 'Roboto', sans-serif;
 }
 
-@mixin font-brand {
-  font-family: 'Copse', serif;
+@mixin font-cursive {
+  font-family: 'Lobster', cursive;
 }
