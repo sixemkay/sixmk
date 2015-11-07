@@ -7,6 +7,9 @@ gem 'rails', '4.2.4'
 # Use pg as the database for Active Record
 gem 'pg'
 
+# For logging with heroku
+gem 'rails_12factor', group: :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
