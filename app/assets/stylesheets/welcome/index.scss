@@ -162,7 +162,7 @@ body {
 
                   > header,
                   > footer {
-                    text-align: center;
+                    text-align: left;
                   }
 
                   > header {
@@ -191,7 +191,7 @@ body {
                     > header {
                       color: $font-brand;
                       font-size: $large;
-                      text-align: center;
+                      //text-align: center;
 
                       @include font-cursive;
                     }
@@ -201,6 +201,7 @@ body {
 
               > footer {
                 font-size: $big-ass-title;
+                padding-bottom: 21px;
                 text-align: center;
 
                 @include font-cursive;
