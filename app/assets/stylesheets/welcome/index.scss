@@ -169,7 +169,7 @@ body {
                     font-size: $really-too-big;
                     padding-bottom: 12px;
 
-                    @include font-cursive;
+                    @include font-brand;
                   }
 
                   > footer {
@@ -193,7 +193,7 @@ body {
                       font-size: $large;
                       //text-align: center;
 
-                      @include font-cursive;
+                      @include font-brand;
                     }
                   }
                 }
@@ -204,7 +204,7 @@ body {
                 padding-bottom: 21px;
                 text-align: center;
 
-                @include font-cursive;
+                @include font-brand;
               }
             }
 
