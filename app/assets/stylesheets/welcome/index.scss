@@ -152,8 +152,59 @@ body {
               background-color: $background-secondary;
             }
 
-            &.tag-line {
-              background-color: $background-tertiary;
+            &.process {
+              background-color: $background-primary;
+
+              > header {
+                padding: 42px 0;
+
+                > section {
+
+                  > header,
+                  > footer {
+                    text-align: center;
+                  }
+
+                  > header {
+                    font-size: $really-too-big;
+                    padding-bottom: 12px;
+
+                    @include font-cursive;
+                  }
+
+                  > footer {
+                    font-size: $large;
+                  }
+                }
+              }
+
+              > ul {
+
+                > li {
+                  display: inline-block;
+                  vertical-align: top;
+                  width: 33%;
+
+                  > section {
+                    padding: 0 28px;
+
+                    > header {
+                      color: $font-brand;
+                      font-size: $large;
+                      text-align: center;
+
+                      @include font-cursive;
+                    }
+                  }
+                }
+              }
+
+              > footer {
+                font-size: $big-ass-title;
+                text-align: center;
+
+                @include font-cursive;
+              }
             }
 
             &.schedule {
