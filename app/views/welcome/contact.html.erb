@@ -1,0 +1,52 @@
+<% content_for(:class) { "welcome contact" } %>
+
+<div ng-controller="ContactController" ng-init="initialize()">
+
+  <ul>
+
+    <%# Email %>
+    <li>
+      <section>
+        <header>
+          Email Us
+        </header>
+        <footer>
+          <i class="fa fa-envelope-o"></i> <a href="mailto:info@sixmk.com">info@sixmk.com</a>
+        </footer>
+        Have a quick questions? Not sure if we can help with your needs? Just want to say "hi"? Email us and we'll get back to you as soon as possible!
+      </section>
+    </li>
+
+    <%# Phone %>
+    <li>
+      <section>
+        <header>
+          Call Us
+        </header>
+        <footer>
+          <i class="fa fa-mobile"></i> <a href="tel:9168774665">(916) 877-4665</a>
+        </footer>
+        Want to <a href="/#schedule">schedule a consultation</a> over the phone? Call us and we'll get you all set up in minutes!
+      </section>
+    </li>
+
+    <%# Location %>
+    <li>
+      <section>
+        <header>
+          Visit Us
+        </header>
+        <footer>
+          <i class="fa fa-mobile"></i> <a href="https://www.google.com/maps/place/2572+21st+St,+Sacramento,+CA+95818/@38.5587148,-121.4885842,17z" target="_blank">2572 21st St, Sacramento, CA 95818</a>
+        </footer>
+        Coming in for a consultation? You can visit sixmkHQ at <a href="http://www.capsity.com" target="_blank">capsity</a> in downtown Sacramento, near Sol Collective and Buffalo Pizza!
+      </section>
+    </li>
+
+  </ul>
+
+  <section>
+    <a href="/#shcedule">...or you may Schedule a FREE consultation with us online now!</a>
+  </section>
+
+</div>

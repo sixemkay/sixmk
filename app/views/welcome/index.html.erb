@@ -1,159 +1,163 @@
 <% content_for(:class) { "welcome index" } %>
 
-<%# scrolling hero section %>
-<ul>
-  <li>
-    <section id="portfolio" class="portfolio">
-      <div class="slideshow">
-        <div>
-          These cool works and so much more!
+<div ng-controller="HomeController" ng-init="initialize()">
+
+  <%# scrolling hero section %>
+  <ul>
+    <li>
+      <section id="portfolio" class="portfolio">
+        <div class="slideshow">
+          <div>
+            These cool works and so much more!
+          </div>
         </div>
-      </div>
-      <footer>
-        <a href="#">see more</a>
-      </footer>
-    </section>
-  </li>
-</ul>
-
-<%# The rest of it %>
-<section>
-
-  <%# process %>
-  <section class="process">
-    <header>
-      <section>
-        <header>
-          Easy 3 Step Process
-        </header>
         <footer>
-          Three simple steps to bring your idea to life
+          <a href="#">see more</a>
         </footer>
       </section>
-    </header>
-    <ul>
-      <li>
+    </li>
+  </ul>
+
+  <%# The rest of it %>
+  <section>
+
+    <%# process %>
+    <section class="process">
+      <header>
         <section>
           <header>
-            Consult
+            Easy 3 Step Process
           </header>
-          We discuss your ideas and your goals for the project. Based on our discussion, I will make suggestions and otline different options to complete the project.
+          <footer>
+            Three simple steps to bring your idea to life
+          </footer>
         </section>
-      </li>
-      <li>
-        <section>
-          <header>
-            Create
-          </header>
-          We work on a design together to ensure that the final product is what you were expecting, if not <%# mother fucking %>better. This can be done in person or be phone/email. The design is refined until finished.
-        </section>
-      </li>
-      <li>
-        <section>
-          <header>
-            Complete
-          </header>
-          Once the design has been finalized we will exchange files for payment and order prints (if applicable). The prints will be delivered to you at home or at work. The end!<%# !!11!1!!1! %>
-        </section>
-      </li>
-    </ul>
+      </header>
+      <ul>
+        <li>
+          <section>
+            <header>
+              Consult
+            </header>
+            We discuss your ideas and your goals for the project. Based on our discussion, I will make suggestions and otline different options to complete the project.
+          </section>
+        </li>
+        <li>
+          <section>
+            <header>
+              Create
+            </header>
+            We work on a design together to ensure that the final product is what you were expecting, if not <%# mother fucking %>better. This can be done in person or be phone/email. The design is refined until finished.
+          </section>
+        </li>
+        <li>
+          <section>
+            <header>
+              Complete
+            </header>
+            Once the design has been finalized we will exchange files for payment and order prints (if applicable). The prints will be delivered to you at home or at work. The end!<%# !!11!1!!1! %>
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <%# schedule an apointment %>
+    <section id="schedule" class="schedule">
+      <header>
+        SCHEDULE A CONSULTATION
+      </header>
+      <div>
+        <iframe src="https://sixmk.youcanbook.me/?noframe=true&skipHeaderFooter=true" style="width:100%;height:380px;border:0px;background-color:transparent;" frameborder="0" allowtransparency="true"></iframe>
+      </div>
+    </section>
+
+    <%# how it works %>
+    <section id="how-it-works" class="how-it-works">
+      <header>
+        HOW IT WORKS
+      </header>
+      <ul>
+        <%# What is sixmk? %>
+        <li>
+          <section>
+            <header>
+              How does it work?
+            </header>
+            <ul>
+              <li class="emphazie">
+                We make the entire process easy on you.
+              </li>
+              <li>
+                First, Schedule your FREE design consultation. Or come by on Tuesdays & Thursdays 11 – 4 @ Capsity Offices: 2572 21st. for a walk-in appointment. Don’t have time to come by? No problem. Talk to us over the phone or via email.
+              </li>
+              <li>
+                During our consultation you can expect professional communication, and guidance to help your idea grow into a successfully realized concept. We have a simple 3 step process to ensure satisfaction: CONSULT, CREATE & COMPLETE.
+              </li>
+              <li>
+                Most clients, who schedule a one-on-one session, leave with a fully completed design. If you have an idea, why wait?
+              </li>
+              <li>
+                <a href="#" scroll-to="schedule">Schedule a FREE consultation with us today</a>!
+              </li>
+            </ul>
+          </section>
+        </li>
+      </ul>
+    </section>
+
+    <%# about section %>
+    <section id="about" class="about">
+      <header>
+        ABOUT
+      </header>
+      <ul>
+        <%# What is sixmk? %>
+        <li>
+          <section>
+            <header>
+              What is sixmk?
+            </header>
+            <b>(pronounced six-em-kay)</b> is a graphic + information design business located in Sacramento, California. We provide personalized design services to people throughout the country in a variety of industries.
+          </section>
+        </li>
+        <%# What does sixmk provide? %>
+        <li>
+          <section>
+            <header>
+              What does sixmk provide?
+            </header>
+            <ul>
+              <li>
+                From print and web-based graphic design, sixmk has all your creative concepts under control.
+              </li>
+              <li>
+                Planning an event, wedding or party? We’ll take care of the invites, greeting cards and banners.
+              </li>
+              <li>
+                Need effective marketing materials, booklets, programs, or brochures for your new business? Let us handle your branding and identity, presentations, and everything you need to help you grow.
+              </li>
+            </ul>
+          </section>
+        </li>
+        <%# What makes sixmk different? %>
+        <li>
+          <section>
+            <header>
+              What makes sixmk different?
+            </header>
+            <ul>
+              <li>
+                At sixmk, you’ll always know what to expect: Competitive pricing that works with your budget. Prints delivered to your doorstep. And what you see… is what you get. We guarantee it.
+              </li>
+              <li>
+                We pride ourselves on simple, effective design and services… Check out our <a href="http://www.yelp.com/biz/sixmk-design-print-sacramento" target="_blank">YELP reviews</a>!
+              </li>
+            </ul>
+          </section>
+        </li>
+      </ul>
+    </section>
+
   </section>
 
-  <%# schedule an apointment %>
-  <section id="schedule" class="schedule">
-    <header>
-      SCHEDULE A CONSULTATION
-    </header>
-    <div>
-      <iframe src="https://sixmk.youcanbook.me/?noframe=true&skipHeaderFooter=true" style="width:100%;height:380px;border:0px;background-color:transparent;" frameborder="0" allowtransparency="true"></iframe>
-    </div>
-  </section>
-
-  <%# how it works %>
-  <section id="how-it-works" class="how-it-works">
-    <header>
-      HOW IT WORKS
-    </header>
-    <ul>
-      <%# What is sixmk? %>
-      <li>
-        <section>
-          <header>
-            How does it work?
-          </header>
-          <ul>
-            <li class="emphazie">
-              We make the entire process easy on you.
-            </li>
-            <li>
-              First, Schedule your FREE design consultation. Or come by on Tuesdays & Thursdays 11 – 4 @ Capsity Offices: 2572 21st. for a walk-in appointment. Don’t have time to come by? No problem. Talk to us over the phone or via email.
-            </li>
-            <li>
-              During our consultation you can expect professional communication, and guidance to help your idea grow into a successfully realized concept. We have a simple 3 step process to ensure satisfaction: CONSULT, CREATE & COMPLETE.
-            </li>
-            <li>
-              Most clients, who schedule a one-on-one session, leave with a fully completed design. If you have an idea, why wait?
-            </li>
-            <li>
-              <a href="#" scroll-to="schedule">Schedule a FREE consultation with us today</a>!
-            </li>
-          </ul>
-        </section>
-      </li>
-    </ul>
-  </section>
-
-  <%# about section %>
-  <section id="about" class="about">
-    <header>
-      ABOUT
-    </header>
-    <ul>
-      <%# What is sixmk? %>
-      <li>
-        <section>
-          <header>
-            What is sixmk?
-          </header>
-          <b>(pronounced six-em-kay)</b> is a graphic + information design business located in Sacramento, California. We provide personalized design services to people throughout the country in a variety of industries.
-        </section>
-      </li>
-      <%# What does sixmk provide? %>
-      <li>
-        <section>
-          <header>
-            What does sixmk provide?
-          </header>
-          <ul>
-            <li>
-              From print and web-based graphic design, sixmk has all your creative concepts under control.
-            </li>
-            <li>
-              Planning an event, wedding or party? We’ll take care of the invites, greeting cards and banners.
-            </li>
-            <li>
-              Need effective marketing materials, booklets, programs, or brochures for your new business? Let us handle your branding and identity, presentations, and everything you need to help you grow.
-            </li>
-          </ul>
-        </section>
-      </li>
-      <%# What makes sixmk different? %>
-      <li>
-        <section>
-          <header>
-            What makes sixmk different?
-          </header>
-          <ul>
-            <li>
-              At sixmk, you’ll always know what to expect: Competitive pricing that works with your budget. Prints delivered to your doorstep. And what you see… is what you get. We guarantee it.
-            </li>
-            <li>
-              We pride ourselves on simple, effective design and services… Check out our <a href="http://www.yelp.com/biz/sixmk-design-print-sacramento" target="_blank">YELP reviews</a>!
-            </li>
-          </ul>
-        </section>
-      </li>
-    </ul>
-  </section>
-
-</section>
+</div>

@@ -1,0 +1,62 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.contact {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+
+          > ul {
+            padding: 42px;
+
+            > li {
+              display: inline-block;
+              vertical-align: top;
+              width: 32%;
+
+              > section {
+                color: $font-gray;
+                padding: 0 12px;
+
+                > header {
+                  color: $font-brand;
+                  font-size: $largest;
+                  padding-bottom: 12px;
+
+                  @include font-brand;
+                }
+
+                > footer {
+                  color: $font-black;
+                  font-size: $small;
+                  font-weight: bold;
+                  padding: 8px 0 12px;
+                }
+              }
+            }
+          }
+
+          > section {
+            text-align: center;
+
+            > a {
+              color: $font-brand;
+              text-decoration: underline;
+              transition: all 0.2s;
+
+              &:hover {
+                font-size: $large;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
