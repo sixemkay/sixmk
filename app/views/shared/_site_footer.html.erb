@@ -12,8 +12,7 @@
     </li>
     <li>
       <i class="fa fa-calendar-check-o"></i> 
-      <a ng-if="pageName == 'welcome_index'" href="#" scroll-to="schedule">schedule</a>
-      <a ng-if="pageName != 'welcome_index'" href="/#schedule">schedule</a>
+      <a ng-href="{{ navLinkFor('schedule') }}" scroll-to="schedule">schedule</a>
     </li>
   </ul>
 

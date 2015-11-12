@@ -230,10 +230,10 @@
         var targetElement;
 
         $elem.on('click', function(e) {
-          e.preventDefault();
-
           targetElement = document.getElementById($attrs.scrollTo);
           if ( !targetElement ) return;
+
+          e.preventDefault();
 
           var callbackBefore = function(element) {
             if ( $attrs.callbackBefore ) {

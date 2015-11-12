@@ -8,12 +8,17 @@ sixmkAppControllersModule.controller("SiteController",
 
     $scope.pageName = gon.page_name
 
+    $scope.navLinkFor = (string) ->
+      if $scope.pageName == 'welcome_index'
+        "#" 
+      else
+        "/##{string}"
+
     $scope.windowLocation = (url) ->
       window.location = url
     
     $scope.initialize = ->
       console.log("hello site.")
-      console.log("page name is: #{$scope.pageName}")
 
 
   ])

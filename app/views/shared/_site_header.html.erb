@@ -10,25 +10,22 @@
 
     <footer>
       
-      <%# Header when user is on the home page
-        # (and therefore where we want sroll-to animations)
-       %>
-      <ul ng-if="pageName == 'welcome_index'">
+      <ul>
         <li class="sub-menu">
           <ul>
             <li>
-              <a href="#" scroll-to="about">ABOUT</a>
+              <a ng-href="{{ navLinkFor('about') }}" scroll-to="about">ABOUT</a>
             </li>
             <li>
               <ul>
                 <li>
-                  <a href="#" scroll-to="how-it-works">how it works</a>
+                  <a ng-href="{{ navLinkFor('how-it-works') }}" scroll-to="how-it-works">how it works</a>
                 </li>
                 <li>
-                  <a href="#" scroll-to="testimonials">testimonials</a>
+                  <a ng-href="{{ navLinkFor('testimonials') }}" scroll-to="testimonials">testimonials</a>
                 </li>
                 <li>
-                  <a href="#" scroll-to="portfolio">portfolio</a>
+                  <a ng-href="{{ navLinkFor('portfolio') }}" scroll-to="portfolio">portfolio</a>
                 </li>
               </ul>
             </li>
@@ -38,37 +35,7 @@
           <a href="/contact">CONTACT</a>
         </li>
         <li>
-          <a class="primary" href="#" scroll-to="schedule">SCHEDULE <span class="optional-text">A CONSULATATION</span></a>
-        </li>
-      </ul>
-
-      <%# All other pages' header %>
-      <ul ng-if="pageName != 'welcome_index'">
-        <li class="sub-menu">
-          <ul>
-            <li>
-              <a href="/#about">ABOUT</a>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <a href="/#how-it-works">how it works</a>
-                </li>
-                <li>
-                  <a href="/#testimonials">testimonials</a>
-                </li>
-                <li>
-                  <a href="/#portfolio">portfolio</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/contact">CONTACT</a>
-        </li>
-        <li>
-          <a class="primary" href="/#schedule">SCHEDULE A CONSULATATION</a>
+          <a class="primary" ng-href="{{ navLinkFor('schedule') }}" scroll-to="schedule">SCHEDULE <span class="optional-text">A CONSULATATION</span></a>
         </li>
       </ul>
 
