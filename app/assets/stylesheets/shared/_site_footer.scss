@@ -20,16 +20,32 @@ body {
 
       > ul {
         margin: 0 auto;
-        padding-top: 42px;
+        padding: 42px 0;
 
         > li {
           border-right: 1px solid $border-brand;
           display: inline-block;
+          margin: 2px 0;
           padding: 0 8px;
 
           &:last-child {
             border-right: none;
           }
+        }
+      }
+    }
+
+    // at the break-point yeah
+
+    @media (max-width: 630px) {
+
+      > div.site-footer > ul {
+        padding: 12px 0;
+
+        > li {
+          border-right: none;
+          display: block;
+          margin: 12px 0;
         }
       }
     }
