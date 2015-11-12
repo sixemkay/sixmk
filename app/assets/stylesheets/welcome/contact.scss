@@ -62,5 +62,27 @@ body {
         }
       }
     }
+
+    // getting tiny with it
+
+    @media (max-width: 630px) {
+
+      > section.page-container.welcome.contact > div {
+
+        > ul > li {
+          display: block;
+          padding-bottom: 42px;
+          width: 100%;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+
+        > section {
+          padding-bottom: 42px;
+        }
+      }
+    }
   }
 }
