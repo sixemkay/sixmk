@@ -23,16 +23,14 @@ body {
         > * {
           display: inline-block;
           height: 100%;
-          padding-top: 16px;
-          vertical-align: middle;
+          vertical-align: top;
         }
 
         > header {
-          font-size: $big-ass-title;
-          padding-left: 16px;
+          font-size: $largest;
+          height: calc(100% - 15px);
+          padding: 15px 0 0 15px;
           width: 20%;
-
-          @media (max-width: 64em) { font-size: $large; }
 
           > a {
             color: $font-black;
@@ -47,16 +45,18 @@ body {
         }
 
         > footer {
-          height: 100%;
           font-size: $small;
+          height: calc(100% - 17px);
+          padding-top: 17px;
           text-align: right;
           width: 75%;
 
           > ul {
+            height: 100%;
 
             > li {
               display: inline-block;
-              min-height: 34px;
+              height: 100%;
               padding: 0 10px;
 
               > a,
@@ -122,13 +122,28 @@ body {
 
     @media (max-width: 630px) {
 
-      > div.site-header > section > footer {
-        font-size: $smallest;
-        width: 70%;
+      > div.site-header > section {
 
-        > ul > li:not(:last-child) {
-          display: none;
+        > header {
+          font-size: $small;
         }
+
+        > footer {
+          font-size: $smallest;
+          width: 70%;
+
+          > ul > li {
+            padding: 0 4px;
+
+            > a {
+              margin-left: 0;
+
+              span.optional-text {
+                display: none;
+              }
+            }
+          }
+        }  
       }
     }
   }
