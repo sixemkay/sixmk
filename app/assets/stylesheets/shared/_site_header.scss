@@ -116,5 +116,20 @@ body {
         }
       }
     }
+
+    // a few overrides for small screens
+    // (mobile second!??!?!! blasphemy!)
+
+    @media (max-width: 630px) {
+
+      > div.site-header > section > footer {
+        font-size: $smallest;
+        width: 70%;
+
+        > ul > li:not(:last-child) {
+          display: none;
+        }
+      }
+    }
   }
 }

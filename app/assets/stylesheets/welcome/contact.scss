@@ -36,13 +36,17 @@ body {
                   color: $font-black;
                   font-size: $small;
                   font-weight: bold;
+                  overflow: hidden;
                   padding: 8px 0 12px;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
                 }
               }
             }
           }
 
           > section {
+            padding-bottom: 20px;
             text-align: center;
 
             > a {
