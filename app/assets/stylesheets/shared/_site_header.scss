@@ -99,14 +99,17 @@ body {
                   }
                 }
 
-                &:hover {
-                  text-decoration: underline $border-brand;
+                @media (min-width: 631px) {
 
-                  > ul > li > ul {
-                    display: block;
+                  &:hover {
+                    text-decoration: underline $border-brand;
 
-                    &:hover {
+                    > ul > li > ul {
                       display: block;
+
+                      &:hover {
+                        display: block;
+                      }
                     }
                   }
                 }

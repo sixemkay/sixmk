@@ -235,8 +235,6 @@
 
           e.preventDefault();
 
-          $("#header-sub-menu").css('display', 'none');
-
           var callbackBefore = function(element) {
             if ( $attrs.callbackBefore ) {
               var exprHandler = $scope.callbackBefore({element: element});
