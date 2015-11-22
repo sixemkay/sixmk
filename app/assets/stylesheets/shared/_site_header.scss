@@ -79,7 +79,6 @@ body {
                       background-color: $background-primary;
                       border-left: 1px solid $border-gray;
                       border-top: 1px solid $border-gray;
-                      display: none;
                       position: absolute;
                       top: 34px;
                       width: 200px;
@@ -99,19 +98,8 @@ body {
                   }
                 }
 
-                @media (min-width: 631px) {
-
-                  &:hover {
-                    text-decoration: underline $border-brand;
-
-                    > ul > li > ul {
-                      display: block;
-
-                      &:hover {
-                        display: block;
-                      }
-                    }
-                  }
+                &:hover {
+                  text-decoration: underline $border-brand;
                 }
               }
             }

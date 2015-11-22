@@ -14,6 +14,16 @@ sixmkAppControllersModule.controller("SiteController",
       else
         "/##{string}"
 
+
+    $scope.aboutMenuVisible = false
+
+    $scope.showAboutMenu = ->
+      $scope.aboutMenuVisible = true
+
+    $scope.hideAboutMenu = ->
+      $scope.aboutMenuVisible = false
+
+
     $scope.windowLocation = (url) ->
       window.location = url
     
