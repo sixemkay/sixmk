@@ -234,7 +234,8 @@
           if ( !targetElement ) return;
 
           e.preventDefault();
-          targetElement.blur();
+
+          $("#header-sub-menu").hide();
 
           var callbackBefore = function(element) {
             if ( $attrs.callbackBefore ) {
