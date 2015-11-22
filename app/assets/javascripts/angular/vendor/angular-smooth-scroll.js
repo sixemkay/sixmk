@@ -234,6 +234,7 @@
           if ( !targetElement ) return;
 
           e.preventDefault();
+          e.blur();
 
           var callbackBefore = function(element) {
             if ( $attrs.callbackBefore ) {
