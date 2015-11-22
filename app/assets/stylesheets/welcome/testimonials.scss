@@ -1,0 +1,84 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.testimonials {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+
+          > section {
+            background-color: $background-primary;
+
+            @include site-width;
+
+            > section {
+              padding: 20px;
+              min-height: 200px;
+              width: 100%;
+              width: calc(100% - 40px);
+
+              &.google {
+                background-color: $background-secondary;
+                //color: $font-white;
+              }
+
+              &.yelp {
+                background-color: $background-primary;
+              }
+
+              > footer {
+                text-align: right;
+                width: 100%;
+              }
+
+              > footer {
+                font-size: $small;
+              }
+
+              > ul {
+
+                > li {
+                  padding-bottom: 20px;
+
+                  > section {
+
+                    > header {
+                      color: $font-gray;
+                      font-size: $larger;
+                      font-weight: bold;
+                      padding-bottom: 12px;
+
+                      @include font-brand;
+                    }
+                  }
+                }
+              }
+            }
+            
+            > footer {
+              margin: 12px 0;
+              padding: 20px;
+              text-align: center;
+
+              > a {
+                color: $font-brand;
+                text-decoration: underline;
+                transition: all 0.2s;
+
+                &:hover {
+                  font-size: $large;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
