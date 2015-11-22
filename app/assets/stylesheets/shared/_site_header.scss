@@ -99,15 +99,13 @@ body {
                   }
                 }
 
-                &:hover,
-                &:focus {
+                &:hover {
                   text-decoration: underline $border-brand;
 
                   > ul > li > ul {
                     display: block;
 
-                    &:hover,
-                    &:focus {
+                    &:hover {
                       display: block;
                     }
                   }

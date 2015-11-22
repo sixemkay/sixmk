@@ -14,12 +14,6 @@ sixmkAppControllersModule.controller("SiteController",
       else
         "/##{string}"
 
-    $(".sub-menu").focusout( ->
-      $('#selecteddiv').animate( ->
-        display: "none"
-      )
-    )
-
     $scope.windowLocation = (url) ->
       window.location = url
     
