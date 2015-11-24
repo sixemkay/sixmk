@@ -29,9 +29,12 @@ body {
               width: 100%;
               width: calc(100% - 40px);
 
+              &.fb {
+                background-color: $background-primary;
+              }
+
               &.google {
                 background-color: $background-secondary;
-                //color: $font-white;
               }
 
               &.yelp {
