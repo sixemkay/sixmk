@@ -1,0 +1,51 @@
+<% content_for(:class) { "quiz furniture" } %>
+
+<div ng-controller="QuizController" ng-init="initialize()">
+
+  <h1>
+    What's your style, furniture(ly) speaking?
+  </h1>
+  <p>
+    you're just {{ questions.length }} answers from finding out!
+  </p>
+
+  <form ng-submit="showResults()" id="questions">
+    <ul>
+      <li ng-repeat="question in questions">
+        <section>
+          <header>
+            {{ question.question }}
+          </header>
+          <ul>
+            <li ng-repeat="answer in question.answers">
+              <label>
+                <input type="radio" name="{{ question.answer_key }}" value="{{ answer.value }}" />
+                {{ answer.answer }}
+              </label>
+            </li>
+          </ul>
+        </section>
+      </li>
+    </ul>
+    <input type="submit" value="Díme" />
+  </form>
+
+  <section id="results">
+    <header>
+      I like your style!
+    </header>
+    <ul>
+      <li ng-repeat="result in matchingResults()">
+        <section>
+          <header>
+            {{ result.result }}
+          </header>
+          <footer>
+            <img src="{{ result.result_url }}" />
+          </footer>
+        </section>
+      </li>
+    </ul>
+  </section>
+
+</div>
