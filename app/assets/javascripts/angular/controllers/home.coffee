@@ -3,11 +3,12 @@
 sixmkAppControllersModule = angular.module("sixmkApp.controllers")
 
 sixmkAppControllersModule.controller("HomeController",
-  [ "$scope", 
-  (  $scope ) ->
+  [ "$location", "$scope", "smoothScroll", 
+  (  $location,   $scope,   smoothScroll ) ->
+
 
     $scope.initialize = ->
-      console.log("hello home.")
-
+      if $location.search().target?
+        smoothScroll( document.getElementById( "#{$location.search().target}" ) )
 
   ])

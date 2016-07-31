@@ -1,0 +1,122 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.portfolio {
+        min-height: 420px;
+
+        a {
+          color: $font-brand;
+        }
+
+        > div {
+          margin-top: $header-height;
+
+          > section {
+            background-color: $background-primary;
+
+            @include site-width;
+
+            > header {
+              color: $font-brand;
+              font-size: $big-ass-title;
+              padding: 36px 0 12px 14px;
+
+              @media (max-width: 420px) {
+                line-height: 110%;
+              }
+            }
+
+            > section {
+              background-color: $background-primary;
+              padding: 20px;
+              min-height: 200px;
+              width: 100%;
+              width: calc(100% - 40px);
+
+              &.sactomofo,
+              &.random {
+
+                > footer {
+                  text-align: right;
+                }
+              }
+
+              > header {
+                display: inline-block;
+                font-size: $really-too-big;
+                line-height: 110%;
+                margin-bottom: 16px;
+                text-align: center;
+                vertical-align: middle;
+                width: 20%;
+
+                @media (max-width: 420px) {
+                  width: 100%;
+                }
+
+                > a {
+                  color: $font-black;
+                }
+              }
+
+              > footer {
+                color: $font-black;
+                display: inline-block;
+                margin-bottom: 16px;
+                vertical-align: middle;
+                width: 78%;
+
+                @media (max-width: 420px) {
+                  display: none;
+                }
+              }
+
+              > ul {
+                background-color: $background-secondary;
+                width: 100%;
+
+                > li {
+                  margin-right: -4px;
+                  padding: 8px;
+                  text-align: center;
+                  vertical-align: top;
+                  width: 100%;
+                }
+              }
+
+              > div {
+                background-color: $border-brand;
+                border: 1px solid $border-brand;
+                border-radius: 2px;
+                height: 5px;
+                margin-top: 10px;
+                width: 100%;
+              }
+            }
+            
+            > footer {
+              margin: 12px 0;
+              padding: 20px;
+              text-align: center;
+
+              > a {
+                color: $font-brand;
+                text-decoration: underline;
+                transition: all 0.2s;
+
+                &:hover {
+                  font-size: $large;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
