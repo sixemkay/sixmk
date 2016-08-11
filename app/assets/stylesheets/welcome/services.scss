@@ -88,6 +88,10 @@ body {
                 display: inline-block;
                 margin-bottom: 16px;
                 vertical-align: middle;
+
+                @media (max-width: 420px) {
+                  display: block;
+                }
               }
 
               > ul {
