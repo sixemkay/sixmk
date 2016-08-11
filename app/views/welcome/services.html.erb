@@ -8,14 +8,109 @@
       We don't do it all, we just do it well...
     </header>
 
-    <%# Flyers, Cards, Weddings %>
-    <section class="random">
+    <%# Flyers, Cards, and Stuff %>
+    <section class="flyers-cards" ng-click="toggleFlyersCards()">
       <header>
-        Flyers &<br />Cards &<br />Weddings
+        Flyers &<br /><span class="small">Brochures &</span><br /><span class="smaller">Posters & More</span>
       </header>
       <footer>
-        We've designed and printed flyers, postcards, brochures, wedding invitations, and business cards galore! We take pride in understanding what you desire so when you see the result you can't help but smile.
+        We've designed and printed flyers, postcards, brochures, leaflets, handbills, and posters galore! We take pride in understanding what you desire so when you see the result you can't help but smile. Whether you're looking to make a tri-fold brochure packed with information for your members, or hoping to attract the eyes of new customers with fetching flyers, we've got you covered!
       </footer>
+      <ul ng-class="{ expanded: flyersCardsExpanded }">
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/OFQvi"><a href="//imgur.com/OFQvi"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/iwcN1"><a href="//imgur.com/iwcN1"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </section>
+
+    <%# Wedding and Event Invitations %>
+    <section class="weddings-and-events" ng-click="toggleWeddingsEvents()">
+      <footer>
+        Your special day, your special gathering, your kick-ass party, whatever the occasion the right design on the right card stock in the right envelope will make it that much better. From high-gloss awesomeness to lacy elegance, we'll ensure the design and materials perfectly compliment your event.
+      </footer>
+      <header>
+        Wedding &<br /><span class="smaller">Event Invitations</span>
+      </header>
+      <ul ng-class="{ expanded: weddingsEventsExpanded }">
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/XuCip"><a href="//imgur.com/XuCip"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </section>
+
+    <%# Business Goods %>
+    <section class="business-goods" ng-click="toggleBusinessGoods()">
+      <header>
+        Business<br /><span class="small">Materials</span>
+      </header>
+      <footer>
+        Make your business look sharp with business cards, letterheads, pamphlets, and more! Every employee wants that cool business card, every professional wants their meeting materials to look as good as them, and all business owners want to keep a clean and consistent look and feel across their well-oiled machine. Ask about our package deals to save more when you need multiple items!
+      </footer>
+      <ul ng-class="{ expanded: businessGoodsExpanded }">
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/sMqzZ"><a href="//imgur.com/sMqzZ"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/RvZNI"><a href="//imgur.com/RvZNI"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/T5Jys"><a href="//imgur.com/T5Jys"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </section>
+
+    <%# Digital Media %>
+    <section class="online-ads" ng-click="toggleOnlineAds()">
+      <footer>
+        Advertising online is a necessity in this day and age, and we enjoy crafting the ads you want for Facebook, Google, AdSense, and any other marketing you do. We will create a catalog of ads with all the required sizes to get you approved in all the major ad platforms. We'll also help you create digital assets for your own website!
+      </footer>
+      <header>
+        Digital<br /><span class="smaller">Ads & Assets</span>
+      </header>
+      <ul ng-class="{ expanded: onlineAdsExpanded }">
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/VIytQ"><a href="//imgur.com/VIytQ"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/zwV2c"><a href="//imgur.com/zwV2c"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+        <li>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="a/umJCa"><a href="//imgur.com/umJCa"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </section>
+
+    <%# Shopify Management %>
+    <section class="shopify-management">
+      <header>
+        Shopify<br /><span class="smaller">Administration</span>
+      </header>
+      <footer>
+        Need help administering your online store front? We have experience in Shopify administration, including inventory creation and site customization, and we'd be thrilled to help you!
+      </footer>
+      <div>
+      </div>
+    </section>
+
+    <%# Custom Website %>
+    <section class="custom-site">
+      <footer>
+        Do you like the idea of having a custom website, not just another Wordpress Themed website? Do you like this website? You could have a custom site of your own, a Ruby on Rails website (technically speaking)! Ask us for more information.
+      </footer>
+      <header>
+        Custom<br />Website
+      </header>
     </section>
 
     <%# Go on, schedule a consultation %>

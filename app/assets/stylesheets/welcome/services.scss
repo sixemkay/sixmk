@@ -29,25 +29,49 @@ body {
 
             > section {
               background-color: $background-primary;
+              cursor: pointer;
               padding: 20px;
-              min-height: 200px;
               width: 100%;
               width: calc(100% - 40px);
 
-              &.sactomofo,
-              &.random {
-                
+              &.custom-site,
+              &.online-ads,
+              &.weddings-and-events {
 
                 > footer {
                   text-align: right;
                 }
               }
 
+              &.shopify-management,
+              &.custom-site {
+                cursor: default;
+              }
+
               > header {
                 font-size: $really-too-big;
-                line-height: 110%;
+                line-height: 80%;
                 text-align: center;
                 width: 20%;
+
+                > span {
+                  display: inline-block;
+
+                  &.small {
+                    font-size: $big-ass-title;
+                    line-height: 70%;
+                  }
+
+                  &.smaller {
+                    font-size: $largest;
+                    line-height: 60%;
+                  }
+
+                  &.smallest {
+                    font-size: $larger;
+                    line-height: 50%;
+                  }
+                }
 
                 > a {
                   color: $font-black;
@@ -68,7 +92,17 @@ body {
 
               > ul {
                 background-color: $background-secondary;
+                max-height: 0;
+                overflow: hidden;
                 width: 100%;
+
+                -webkit-transition: max-height 0.8s;
+                -moz-transition: max-height 0.8s;
+                transition: max-height 0.8s;
+
+                &.expanded {
+                  max-height: 3000px;
+                }
 
                 > li {
                   margin-right: -4px;

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'contact' => 'welcome#contact'
   get 'portfolio' => 'welcome#portfolio'
+  get 'services' => 'welcome#services'
   get 'testimonials' => 'welcome#testimonials'
 
   resources :quizes do
