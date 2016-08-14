@@ -9,3 +9,4 @@
 /log/*
 /tmp
 /public/assets/
+/spec/examples.txt

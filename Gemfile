@@ -43,6 +43,11 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test, :rspec do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+end
+
 group :production do
   # For logging with heroku
   gem 'rails_12factor'
