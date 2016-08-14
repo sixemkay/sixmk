@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <ul style="width: 640px; margin: 4px 20px 20px 20px; padding: 0;">
+      <%# Header %>
+      <%= render "shared/mailer_header" %>
+      
+      <%# Main content %>
+      <li style="width: 100%; margin: 24px 0 0 0; list-style-type: none;">
+        <ul style="padding: 0 24px">
+          <li style="margin: 0; list-style-type: none;">
+            <%= yield %>
+          </li>
+        </ul>
+      </li>
+
+      <%# Footer %>
+      <%= render "shared/mailer_footer" %>
+    </ul>
+  </body>
+</html>
