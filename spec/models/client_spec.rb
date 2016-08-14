@@ -33,15 +33,4 @@ RSpec.describe Client do
     end
   end
 
-
-  describe "name" do
-    it "should be present" do
-      @client.name = ""
-      expect(@client).to be_invalid
-
-      @client.name = "Awesome person"
-      expect(@client).to be_valid
-    end
-  end
-
 end

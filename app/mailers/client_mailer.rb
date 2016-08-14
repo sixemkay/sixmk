@@ -5,7 +5,7 @@ class ClientMailer < ActionMailer::Base
 
 
   def five_years_of_five_stars(client)
-    @name = client.name
+    @name = client.first_name || client.business_name || ""
     @email = client.email
     mail(to: @email, subject: "Thanks for five years of five stars!")
   end
