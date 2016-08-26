@@ -1,0 +1,46 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.products.show {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+          padding: 40px 0;
+
+          > h1 {
+            color: $font-brand;
+          }
+
+          > section {
+
+            > header,
+            > footer {
+              display: inline-block;
+              vertical-align: top;
+            }
+
+            > header {
+              border: 1px solid $border-gray;
+              height: 300px;
+              margin-right: 40px;
+              width: 300px;
+            }
+
+            > footer {
+
+              > p {
+                padding-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

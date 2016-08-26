@@ -7,10 +7,6 @@ Rails.application.routes.draw do
   get 'services' => 'welcome#services'
   get 'testimonials' => 'welcome#testimonials'
 
-  resources :quizes do
-    collection do
-      get 'furniture'
-    end
-  end
+  resources :products
   
 end
