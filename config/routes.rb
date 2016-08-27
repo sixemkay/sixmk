@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get 'services' => 'welcome#services'
   get 'testimonials' => 'welcome#testimonials'
 
-  resources :products
+  resources :products do
+    member do
+      get 'thankyou'
+    end
+  end
   
 end

@@ -8,9 +8,13 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find_by_id(params[:id])
-    if @product.nil?
-      redirect_to root_url
-    end
+    redirect_to root_url if @product.nil?
+  end
+
+
+  def thankyou
+    @product = Product.find_by_id(params[:id])
+    redirect_to root_url if @product.nil?
   end
 
 

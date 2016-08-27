@@ -1,0 +1,23 @@
+<% content_for(:class) { "products thankyou" } %>
+
+<div ng-controller="ProductsThankyouController" ng-init="initialize()">
+
+  <h1>
+    <%= @product.name %>
+  </h1>
+
+  <section>
+    <header>
+      image here
+    </header>
+    <footer>
+      <p>
+        <%= @product.description %>
+      </p>
+      <p>
+        Thanks for your support! We hope you enjoy using this design pad as much as we do =]
+      </p>
+    </footer>
+  </section>
+
+</div>
