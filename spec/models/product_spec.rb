@@ -68,6 +68,17 @@ RSpec.describe Product do
   end
 
 
+  describe "slug" do
+    it "should be the product's name with '-'s in place non-word characters" do
+      @product.name = "Web, Tablet, and Mobile (Responsive) Sketchbook"
+      expect(@product.slug).to eq("Web-Tablet-and-Mobile-Responsive-Sketchbook")
+
+      @product.name = "Foo Bar 123!"
+      expect(@product.slug).to eq("Foo-Bar-123-")
+    end
+  end
+
+
   describe "sold_counter" do
     it "should be present" do
       @product.sold_counter = nil
@@ -75,6 +86,17 @@ RSpec.describe Product do
 
       @product.sold_counter = 0
       expect(@product).to be_valid
+    end
+  end
+
+
+  describe "to_param" do
+    it "should be the id then the result of 'slug' with a '-' inbetween" do
+      @product.name = "Web, Tablet, and Mobile (Responsive) Sketchbook"
+      @product.save
+      expect(@product).to be_persisted
+      expect(@product.to_param).to eq("#{@product.id}-Web-Tablet-and-Mobile-Responsive-Sketchbook")
+      @product.destroy
     end
   end
 
