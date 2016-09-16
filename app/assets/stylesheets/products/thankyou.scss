@@ -11,13 +11,20 @@ body {
 
         > div {
           margin-top: $header-height;
-          padding: 40px 0;
+          padding: 36px 0 12px 14px;
 
           > h1 {
             color: $font-brand;
+            margin: 0 0 30px 0;
+            padding: 0;
+
+            @media (max-width: 420px) {
+              line-height: 110%;
+            }
           }
 
           > section {
+            color: $font-gray;
 
             > header,
             > footer {
@@ -26,16 +33,78 @@ body {
             }
 
             > header {
-              border: 1px solid $border-gray;
-              height: 300px;
               margin-right: 40px;
-              width: 300px;
+
+              @media (max-width: 981px) {
+                margin-right: 20px;
+              }
+
+              @media (max-width: 420px) {
+                margin-right: 0;
+              }
+
+              > img {
+                border: 1px solid $border-gray;
+                border-radius: 2px;
+                cursor: pointer;
+                height: 400px;
+                width: 400px;
+
+                @media (max-width: 420px) {
+                  height: 280px;
+                  margin: 0 auto;
+                  width: 280px;
+                }
+              }
+
+              > ul {
+                margin-top: 10px;
+                max-width: 400px;
+
+                @media (max-width: 420px) {
+                  max-width: 280px;
+                }
+
+                > li {
+                  display: inline-block;
+                  margin-right: 4px;
+
+                  > img {
+                    height: 40px;
+                    width: 40px;
+                  }
+                }
+              }
             }
 
             > footer {
+              margin: 0 10px;
+              max-width: 500px;
+
+              @media (max-width: 981px) {
+                max-width: 400px;
+              }
+
+              @media (max-width: 881px) {
+                max-width: 300px;
+              }
+
+              @media (max-width: 775px) {
+                margin: 20px 10px 0 0;
+                max-width: 500px;
+              }            
+
+              @media (max-width: 420px) {
+                margin-top: 20px;
+
+                > form {
+                  text-align: center;
+                }
+              }
 
               > p {
-                padding-bottom: 20px;
+                color: $font-gray;
+                margin: 0 0 20px 0;
               }
             }
           }

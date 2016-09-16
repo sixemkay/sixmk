@@ -35,6 +35,10 @@ body {
             > header {
               margin-right: 40px;
 
+              @media (max-width: 981px) {
+                margin-right: 20px;
+              }
+
               @media (max-width: 420px) {
                 margin-right: 0;
               }
@@ -77,8 +81,21 @@ body {
               margin: 0 10px;
               max-width: 500px;
 
+              @media (max-width: 981px) {
+                max-width: 400px;
+              }
+
+              @media (max-width: 881px) {
+                max-width: 300px;
+              }
+
+              @media (max-width: 775px) {
+                margin: 20px 10px 0 0;
+                max-width: 500px;
+              }            
+
               @media (max-width: 420px) {
-                margin-top: 20px;
+                margin: 20px 10px 0 0;
 
                 > form {
                   text-align: center;

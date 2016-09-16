@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
   def thankyou
     @product = Product.find_by_id(params[:id])
     gon.product = @product
+    gon.images = @product.product_images.as_json
     redirect_to root_url if @product.nil?
   end
 

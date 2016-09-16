@@ -3,19 +3,27 @@
 <div ng-controller="ProductsThankyouController" ng-init="initialize()">
 
   <h1>
-    <%= @product.name %>
+    Thanks for being awesome!
   </h1>
 
   <section>
     <header>
-      image here
+      <img ng-src="{{ mainImage['url_square_600'] }}" ng-click="loadImage(mainImage['url_square_1200'])" />
+      <ul>
+        <li ng-repeat="image in images" ng-mouseenter="showImage(image)">
+          <img ng-src="{{ image['url_square_600'] }}" />
+        </li>
+      </ul>
     </header>
     <footer>
       <p>
-        <%= @product.description %>
+        We know you'll love using the "<%= @product.name %>" as much as we do (and we love it a lot).
       </p>
       <p>
-        Thanks for your support! We hope you enjoy using this design pad as much as we do =]
+        If you have any ideas for improvements please don't hesitate to reach out and let us know.
+      </p>
+      <p>
+        Thanks again for your support =]
       </p>
     </footer>
   </section>
