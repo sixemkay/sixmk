@@ -63,6 +63,11 @@ body {
               > ul > li > a {
                 margin-left: 16px;
 
+                &.buy-it-nowish {
+                  color: $font-brand;
+                  font-weight: bold;
+                }
+
                 &.primary {
                   font-weight: bold;
                 }
@@ -129,12 +134,20 @@ body {
             > a {
               margin-left: 0;
 
-              span.optional-text {
+              > span.optional-text,
+              > span.semi-optional-text {
                 display: none;
               }
             }
           }
         }  
+      }
+    }
+
+    @media (max-width: 795px) {
+
+      span.optional-text {
+        display: none;
       }
     }
   }

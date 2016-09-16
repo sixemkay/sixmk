@@ -3,19 +3,23 @@
 <div ng-controller="ProductsShowController" ng-init="initialize()">
 
   <h1>
-    <%= @product.name %>
+    {{ product["name"] }}
   </h1>
 
   <section>
     <header>
-      image here
+      <img ng-src="{{ mainImage['url_square_600'] }}" ng-click="loadImage(mainImage['url_square_1200'])" />
+      <ul>
+        <li ng-repeat="image in images" ng-mouseenter="showImage(image)">
+          <img ng-src="{{ image['url_square_600'] }}" />
+        </li>
+      </ul>
     </header>
     <footer>
+      <section ng-bind-html="productDescription">
+      </section>
       <p>
-        <%= @product.description %>
-      </p>
-      <p>
-        <%= @product.price %>
+        {{ product["price"] | currency }} (+shipping), buy now through PayPal!
       </p>
       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
