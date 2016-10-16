@@ -1,0 +1,21 @@
+<p style="padding-top: 12px; font-size: 14px; color: #666; line-height: 1.42;">
+  We here at <span style="color: #333; font-family: 'Copse', serif;">six</span><span style="color: #DC0062; font-family: 'Copse', serif;">mk</span> wanted to thank you for your awesomeness!
+</p>
+
+<p style="padding-top: 12px; font-size: 14px; color: #666; line-height: 1.42;">
+  We know you'll enjoy the "<%= @product_name %>" as much as we do =]
+</p>
+
+<p style="padding-top: 12px; font-size: 14px; color: #666; line-height: 1.42;">
+  Right now we're preparing you order to be shipped to the following address:
+</p>
+
+<ul>
+  <li><%= @name %></li>
+  <li><%= @address.line1 %> <%= @address.line2 %></li>
+  <li><%= @address.city %>, <%= @address.state %> <%= @address.zip %></li>
+</ul>
+
+<p style="padding-top: 12px; font-size: 14px; color: #666; line-height: 1.42;">
+  You'll receive a shipping notice email in a day or two, so please do visit let us know if the address is incorrect (you may reply directly to this email).
+</p>
