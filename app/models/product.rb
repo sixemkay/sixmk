@@ -26,7 +26,7 @@ class Product < ActiveRecord::Base
   # on a string that begins with numbers and then has
   # characters will return the number in front, which is
   # the id we need for the controller to find the correct
-  # post.
+  # product.
   def to_param
     "#{id}-#{self.slug}"
   end
