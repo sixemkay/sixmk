@@ -13,11 +13,11 @@ class CustomerMailer < ActionMailer::Base
   end
 
 
-  def your_order_has_shipped(customer, product, tracking_link)
+  def your_order_has_shipped(customer, product, tracking_number)
     @name = customer.name || customer.email || ""
     @email = customer.email
     @product_name = product.name
-    @tracking_link = tracking_link
+    @tracking_number = tracking_number
     mail(to: @email, subject: "Your order has shipped!")
   end
 

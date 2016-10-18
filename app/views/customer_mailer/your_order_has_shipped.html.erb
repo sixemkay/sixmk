@@ -3,13 +3,14 @@
 </p>
 
 <p style="padding-top: 12px; font-size: 14px; color: #666; line-height: 1.42;">
-  Soon your "<%= @product_name %>" will be arriving, until then you can track its progress here:
+  Soon your "<%= @product_name %>" will be arriving, until then you can track its progress by...
 </p>
 
 <ul style="list-style: none;">
-  <li><a href="<%= @tracking_link %>"><%= @tracking_link %></a></li>
+  <li>Visiting <a href="https://www.usps.com">USPS.com</a></li>
+  <li>Inputing the tracking # <%= @tracking_number %></li>
 </ul>
 
 <p style="padding-top: 12px; font-size: 14px; color: #666; line-height: 1.42;">
-  
+  You may also receive a tracking email directly from USPS and/or PayPal, but our email is clearly the best =]
 </p>
