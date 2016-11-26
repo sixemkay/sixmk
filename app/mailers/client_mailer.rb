@@ -11,6 +11,13 @@ class ClientMailer < ActionMailer::Base
   end
 
 
+  def holiday_invitations(client)
+    @name = client.first_name || client.business_name || ""
+    @email = client.email
+    mail(to: @email, subject: "Party Season Has Begun")
+  end
+
+
   def thanks_for_your_business(client)
     @name = client.first_name || client.business_name || ""
     @email = client.email
