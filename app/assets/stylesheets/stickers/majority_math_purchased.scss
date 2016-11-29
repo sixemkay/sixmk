@@ -1,0 +1,69 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.majority-math-purchased {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+
+          > h1 {
+            padding: 40px 0 20px;
+            text-align: center;
+
+            @include font-brand;
+          }
+
+          > section {
+            padding: 8px 20px;
+
+            @media (max-width: 760px) { 
+              height: auto; 
+              padding-bottom: 20px;
+              text-align: center;
+            }
+
+            > img {
+              float: left;
+              height: 200px;
+              margin-right: 20px;
+              width: 200px;
+            }
+
+            > header {
+              color: $font-gray;
+              font-size: $larger;
+              font-weight: bold;
+
+              @include font-brand;
+
+              > span {
+                font-size: $normal;
+              }
+            }
+
+            > p {
+              color: $font-black;
+              margin-bottom: 0;
+            }
+          }
+
+          > p {
+            font-style: oblique;
+            padding: 40px 20px;
+            text-align: center;
+
+            > a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

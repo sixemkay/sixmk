@@ -10,6 +10,7 @@ body {
       color: $font-white;
       font-size: $small;
       min-height: 100px;
+      padding: 42px 0;
       text-align: center;
       width: 100%;
       z-index: $z-highest;
@@ -20,7 +21,7 @@ body {
 
       > ul {
         margin: 0 auto;
-        padding: 42px 0;
+        padding-bottom: 12px;
 
         > li {
           border-right: 1px solid $border-brand;

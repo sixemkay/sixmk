@@ -1,0 +1,191 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.election-stickers {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+
+          > h1 {
+            padding-top: 20px;
+            text-align: center;
+
+            @include font-brand;
+          }
+
+          > ul {
+
+            > li {
+              display: inline-block;
+              margin-right: -4px;
+              vertical-align: top;
+              width: 49%;
+
+              @media (max-width: 760px) { width: 100%; }
+
+              &:first-child {
+                border-right: 1px solid $border-brand;
+
+                @media (max-width: 760px) { 
+                  border-bottom: 1px solid $border-brand;
+                  border-right: none;
+                }
+
+                > section {
+
+                  > div {
+
+                    > img {
+                      float: right;
+                      margin-left: 10px;
+
+                      @media (max-width: 760px) { 
+                        float: none; 
+                        margin-right: 0;
+                      }
+                    }
+
+                    > header,
+                    > p {
+                      text-align: right;
+
+                      @media (max-width: 760px) { text-align: center; }
+                    }
+                  }
+
+                  > ul {
+                    text-align: right;
+
+                    @media (max-width: 760px) { text-align: center; }
+                  }
+                }
+              }
+
+              &:last-child {
+
+                > section {
+
+                  @media (max-width: 760px) { 
+                    padding-top: 40px;
+                  }
+
+                  > div {
+
+                    > img {
+                      float: left;
+                      margin-right: 10px;
+
+                      @media (max-width: 760px) { 
+                        float: none; 
+                        margin-left: 0;
+                      }
+                    }
+
+                    > header,
+                    > p {
+                      text-align: left;
+
+                      @media (max-width: 760px) { text-align: center; }
+                    }
+                  }
+
+                  > ul {
+
+                    @media (max-width: 760px) { text-align: center; }
+                  }
+                }
+              }
+
+              > section {
+                padding: 8px 20px;
+
+                > div {
+                  height: 220px;
+
+                  @media (max-width: 760px) { 
+                    height: auto; 
+                    padding-bottom: 20px;
+                    text-align: center;
+                  }
+
+                  > img {
+                    height: 200px;
+                    width: 200px;
+                  }
+
+                  > header {
+                    color: $font-gray;
+                    font-size: $larger;
+                    font-weight: bold;
+
+                    @include font-brand;
+
+                    > span {
+                      font-size: $normal;
+                    }
+                  }
+
+                  > p {
+                    color: $font-black;
+                    margin-bottom: 0;
+                  }
+                }
+
+                > ul {
+                  display: block;
+
+                  > li {
+
+                    &:first-child {
+                      color: $font-gray;
+                      font-size: $small;
+                      font-weight: bold;
+
+                      @include font-brand;
+                    }
+
+                    > i {
+                      color: $font-brand;
+                    }
+
+                    > a {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+
+                > footer {
+                  padding: 40px 0 20px;
+                  text-align: center;
+
+                  > div {
+                    color: $font-gray;
+                    padding-bottom: 6px;
+
+                    @include font-brand;
+                  }
+                }
+              }
+            }
+          }
+
+          > section {
+            font-style: oblique;
+            padding: 40px 20px;
+            text-align: center;
+
+            > a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
