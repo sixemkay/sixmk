@@ -1,0 +1,85 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.election-stickers-electoral-math {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+
+          > h1 {
+            padding: 40px 0 20px;
+            text-align: center;
+
+            @include font-brand;
+          }
+
+          > img {
+            float: left;
+            height: 400px;
+            margin-right: 20px;
+            width: 400px;
+          }
+
+          > p {
+            color: $font-black;
+            font-size: $large;
+            margin-bottom: 20px;
+          }
+
+          > ul {
+            display: inline-block;
+
+            > li {
+
+              &:first-child {
+                color: $font-gray;
+                font-size: $small;
+                font-weight: bold;
+
+                @include font-brand;
+              }
+
+              > i {
+                color: $font-brand;
+              }
+
+              > a {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          > div {
+            padding: 40px 0 20px;
+            text-align: center;
+
+            > div {
+              color: $font-gray;
+              padding-bottom: 6px;
+
+              @include font-brand;
+            }
+          }
+
+          > section {
+            display: block;
+            font-style: oblique;
+            margin-top: 40px;
+            padding: 40px 20px;
+            text-align: center;
+
+            > a {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
