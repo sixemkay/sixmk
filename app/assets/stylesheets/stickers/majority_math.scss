@@ -9,7 +9,7 @@ body {
       &.welcome.election-stickers-majority-math {
         min-height: 420px;
 
-        > div {
+        > section {
           margin-top: $header-height;
 
           > h1 {
@@ -19,21 +19,25 @@ body {
             @include font-brand;
           }
 
-          > img {
-            float: left;
-            height: 400px;
-            margin-right: 20px;
-            width: 400px;
+          > header { 
 
-            @media ( max-width: 670px ) { 
-              float: none;
-              margin-right: 0;
-              text-align: center;
-            }
+            @media ( max-width: 670px ) { text-align: center }
 
-            @media ( max-width: 400px ) {
-              height: auto;
-              width: 100%;
+            > img {
+              float: left;
+              height: 400px;
+              margin-right: 20px;
+              width: 400px;
+
+              @media ( max-width: 670px ) { 
+                float: none;
+                margin-right: 0;
+              }
+
+              @media ( max-width: 400px ) {
+                height: auto;
+                width: 100%;
+              }
             }
           }
 
