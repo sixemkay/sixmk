@@ -24,16 +24,31 @@ body {
             height: 400px;
             margin-right: 20px;
             width: 400px;
+
+            @media ( max-width: 670px ) { 
+              float: none;
+              margin-right: 0;
+              text-align: center;
+            }
+
+            @media ( max-width: 400px ) {
+              height: auto;
+              width: 100%;
+            }
           }
 
           > p {
             color: $font-black;
             font-size: $large;
             margin-bottom: 20px;
+
+            @media ( max-width: 670px ) { padding: 20px; }
           }
 
           > ul {
             display: inline-block;
+
+            @media ( max-width: 670px ) { padding-left: 20px; }
 
             > li {
 
