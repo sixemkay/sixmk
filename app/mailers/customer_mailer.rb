@@ -21,4 +21,14 @@ class CustomerMailer < ActionMailer::Base
     mail(to: @email, subject: "Your order has shipped!")
   end
 
+
+  # Hardcoded ones
+
+  def thanks_for_ordering_majority_math_sticker(customer)
+    @name = customer.name || customer.email || ""
+    @address = customer.address
+    @email = customer.email
+    mail(to: @email, subject: "Thanks for your order!")
+  end
+
 end
