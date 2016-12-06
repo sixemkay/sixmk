@@ -31,4 +31,11 @@ class CustomerMailer < ActionMailer::Base
     mail(to: @email, subject: "Thanks for your order!")
   end
 
+
+  def delayed_shipment_extra_sticker(customer)
+    @name = customer.name || customer.email || ""
+    @email = customer.email
+    mail(to: @email, subject: "Shipping soon... with an extra sticker!")
+  end
+
 end
