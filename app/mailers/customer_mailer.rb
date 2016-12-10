@@ -32,6 +32,15 @@ class CustomerMailer < ActionMailer::Base
   end
 
 
+  def sticker_shipped(customer, tracking_number)
+    @name = customer.name || customer.email || ""
+    @address = customer.address
+    @email = customer.email
+    @tracking_number = tracking_number
+    mail(to: @email, subject: "Your Order has shipped!")
+  end
+
+
   def delayed_shipment_extra_sticker(customer)
     @name = customer.name || customer.email || ""
     @email = customer.email
