@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'services' => 'welcome#services'
   get 'testimonials' => 'welcome#testimonials'
 
+  get 'designer-sketchbook' => 'products#shopify_sketchbook'
+
   resources :products do
     member do
       get 'thankyou'
