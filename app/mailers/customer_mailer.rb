@@ -32,6 +32,14 @@ class CustomerMailer < ActionMailer::Base
   end
 
 
+  def thanks_for_ordering_electoral_math_sticker(customer)
+    @name = customer.name || customer.email || ""
+    @address = customer.address
+    @email = customer.email
+    mail(to: @email, subject: "Thanks for your order!")
+  end
+
+
   def sticker_shipped(customer, tracking_number)
     @name = customer.name || customer.email || ""
     @address = customer.address
