@@ -40,11 +40,11 @@ class CustomerMailer < ActionMailer::Base
   end
 
 
-  def sticker_shipped(customer, tracking_number)
+  def sticker_shipped(customer, arrival_day)
     @name = customer.name || customer.email || ""
     @address = customer.address
     @email = customer.email
-    @tracking_number = tracking_number
+    @arrival_day = arrival_day
     mail(to: @email, subject: "Your Order has shipped!")
   end
 
