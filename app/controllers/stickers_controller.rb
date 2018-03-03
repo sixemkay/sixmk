@@ -1,3 +1,0 @@
-class StickersController < ApplicationController
-
-end

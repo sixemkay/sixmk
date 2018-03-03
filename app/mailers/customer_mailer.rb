@@ -21,38 +21,4 @@ class CustomerMailer < ActionMailer::Base
     mail(to: @email, subject: "Your order has shipped!")
   end
 
-
-  # Hardcoded ones
-
-  def thanks_for_ordering_majority_math_sticker(customer)
-    @name = customer.name || customer.email || ""
-    @address = customer.address
-    @email = customer.email
-    mail(to: @email, subject: "Thanks for your order!")
-  end
-
-
-  def thanks_for_ordering_electoral_math_sticker(customer)
-    @name = customer.name || customer.email || ""
-    @address = customer.address
-    @email = customer.email
-    mail(to: @email, subject: "Thanks for your order!")
-  end
-
-
-  def sticker_shipped(customer, arrival_day)
-    @name = customer.name || customer.email || ""
-    @address = customer.address
-    @email = customer.email
-    @arrival_day = arrival_day
-    mail(to: @email, subject: "Your Order has shipped!")
-  end
-
-
-  def delayed_shipment_extra_sticker(customer)
-    @name = customer.name || customer.email || ""
-    @email = customer.email
-    mail(to: @email, subject: "Shipping soon... with an extra sticker!")
-  end
-
 end
