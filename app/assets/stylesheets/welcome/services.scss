@@ -25,6 +25,11 @@ body {
               color: $font-brand;
               font-size: $big-ass-title;
               padding: 36px 0 12px 14px;
+
+              > div {
+                color: $font-gray;
+                font-size: $smaller;
+              }
             }
 
             > section {

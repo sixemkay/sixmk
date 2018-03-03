@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'contact' => 'welcome#contact'
   get 'portfolio' => 'welcome#portfolio'
   get 'services' => 'welcome#services'
+  get 'design-for-events' => 'welcome#special_events'
   get 'testimonials' => 'welcome#testimonials'
 
   resources :products do

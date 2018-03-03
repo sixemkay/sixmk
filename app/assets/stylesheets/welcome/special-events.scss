@@ -1,0 +1,155 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.special-events {
+        min-height: 420px;
+
+        > div {
+          margin-top: $header-height;
+
+          > section {
+            background-color: $background-primary;
+            border-bottom: 1px solid $border-brand;
+            margin-bottom: 42px;
+            width: 100%;
+
+            > section {
+              padding: 20px;
+              min-height: 200px;
+              width: 100%;
+              width: calc(100% - 40px);
+
+              a {
+                color: $font-brand;
+                text-decoration: underline;
+                transition: all 0.2s;
+
+                &:hover {
+                  font-size: $large;
+                }
+              }
+
+              > header {
+                font-size: $small;
+                padding-bottom: 20px;
+              }
+
+              > ul {
+
+                > li {
+                  padding-bottom: 36px;
+
+                  &:last-child {
+                    padding-bottom: 4px;
+                  }
+
+                  > section {
+
+                    > header {
+                      font-size: $largest;
+                      font-weight: bold;
+                      padding-bottom: 16px;
+
+                      @include font-brand;
+                    }
+
+                    > ul {
+
+                      > li {
+                        padding-bottom: 12px;
+
+                        &.emphazie {
+                          font-size: $larger;
+                          font-style: oblique;
+                          padding: 4px 0 16px;
+                        }
+
+                        &.images {
+                          text-align: center;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.intro {
+                background-color: $background-primary;
+
+                > ul > li > section > header {
+                  color: $font-brand;
+                  font-size: $big-ass-title;
+                  padding: 24px 0;
+
+                  @media (max-width: 420px) {
+                    line-height: 110%;
+                  }
+                }
+              }
+
+              &.weddings {
+                background-color: $background-secondary;
+              }
+
+              &.event-examples {
+                background-color: $background-primary;
+
+                > ul {
+
+                  > li {
+                    color: $font-brand;
+                    display: inline-block;
+                    font-size: $large;
+                    font-weight: bold;
+                    margin-right: -4px;
+                    vertical-align: top;
+                    width: 33%;
+
+                    @media (max-width: 620px) {
+                      display: block;
+                      margin-right: 0;
+                      width: 100%;
+                    }
+
+                    > ul {
+                      padding-top: 12px;
+
+                      > li {
+                        color: $font-black;
+                        font-size: $normal;
+                        font-weight: normal;
+                        padding-bottom: 8px;
+                      }
+                    }
+                  }
+                }
+
+                > footer {
+
+                  > span {
+                    color: $font-brand;
+                    font-weight: bold;
+                  }
+                }
+              }
+
+              &.learn-more {
+                background-color: $background-secondary;
+              }
+
+              &.schedule {
+                background-color: $background-black;
+                color: $font-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
