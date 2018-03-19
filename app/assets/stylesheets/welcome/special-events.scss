@@ -12,10 +12,79 @@ body {
         > div {
           margin-top: $header-height;
 
+          > ul {
+            background-color: $background-primary;
+            height: 420px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: fixed;
+            top: $header-height;
+            width: 100%;
+            z-index: $z-negative;
+
+            @include site-width;
+
+            > li {
+              display: inline-block;
+              vertical-align: top;
+              width: 100%;
+
+              > section {
+                color: $font-black;
+
+                > header {
+                  font-size: $smallest;
+                  text-align: right;
+                }
+
+                > div.slideshow {
+                  height: 420px;
+                  position: relative;
+                  overflow: hidden;
+
+                  > div {
+                    position: absolute;
+                    background: asset-data-url("invitations_crawl_v0");
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 3660px;
+                    
+                    -moz-animation: slideshow 42s linear infinite;
+
+                    -webkit-animation: slideshow 42s linear infinite;
+                    -webkit-transform: translate3d(0, 0, 0);
+                  }
+
+                  @-webkit-keyframes slideshow {
+                    0% { 
+                      -webkit-transform: translateX(0);  
+                    } 
+
+                    100% { 
+                      -webkit-transform: translateX(-2720px);  
+                    }
+                  }
+
+                  @-moz-keyframes slideshow {
+                    0% { 
+                      -moz-transform: translateX(0); 
+                    }    
+                      
+                    100% { 
+                      -moz-transform: translateX(-2720px); 
+                    }
+                  }
+                }
+              }
+            }
+          }
+
           > section {
             background-color: $background-primary;
             border-bottom: 1px solid $border-brand;
-            margin-bottom: 42px;
+            border-top: 1px solid $border-brand;
+            margin: 469px 0 42px 0;
             width: 100%;
 
             > section {
