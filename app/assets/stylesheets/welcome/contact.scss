@@ -7,18 +7,19 @@ body {
     > section.page-container {
       
       &.welcome.contact {
-        min-height: 420px;
+        min-height: 500px;
 
         > div {
           margin-top: $header-height;
 
           > ul {
-            padding: 42px;
+            padding: 80px 42px 42px;
 
             > li {
               display: inline-block;
+              margin-right: -4px;
               vertical-align: top;
-              width: 32%;
+              width: 50%;
 
               > section {
                 color: $font-gray;
