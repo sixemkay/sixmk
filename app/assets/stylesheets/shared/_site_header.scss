@@ -63,12 +63,8 @@ body {
               > ul > li > a {
                 margin-left: 16px;
 
-                &.buy-it-nowish {
-                  color: $font-brand;
-                  font-weight: bold;
-                }
-
                 &.primary {
+                  color: $font-brand;
                   font-weight: bold;
                 }
               }
