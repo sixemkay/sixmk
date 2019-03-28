@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.10'
+gem 'rails', '5.2.2'
 
 # Use pg as the database for Active Record
 gem 'pg'
@@ -14,7 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
@@ -23,7 +23,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 
 # Make Rails controller data directly available in Coffeescript and Javascript.
 gem 'gon'
@@ -38,17 +38,12 @@ end
 
 group :development do
   gem 'pry-rails'
-  gem 'annotate', '~> 2.6.5'
-  gem 'quiet_assets'
+  # gem 'annotate', '~> 2.6.5'
+  # gem 'quiet_assets'
   gem 'spring'
 end
 
-group :development, :test, :rspec do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-end
-
-group :production do
-  # For logging with heroku
-  gem 'rails_12factor'
-end
+# group :development, :test, :rspec do
+#   gem 'factory_girl_rails'
+#   gem 'rspec-rails'
+# end
