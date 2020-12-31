@@ -50,7 +50,8 @@ https://github.com/sixemkay/sixmk
   <body class="sixmk" ng-controller="SiteController" ng-init="initialize()" ng-cloak>
     <%= include_gon %>
 
-    <%= render partial: "shared/site_header" %>
+    <%# <%= render partial: "shared/site_header" %>
+    <%= render partial: "shared/sacrotees_header" %>
     
     <section class="page-container <%= yield(:class) if content_for?(:class) %>">
       <%= yield %>

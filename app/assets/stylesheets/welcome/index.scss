@@ -1,16 +1,12 @@
 @import "mixins";
 
 body {
-  
   &.sixmk {
-
     > section.page-container {
-      
       &.welcome.index {
         position: relative;
 
         > div {
-
           > ul {
             background-color: $background-primary;
             height: 420px;
@@ -31,49 +27,13 @@ body {
               > section {
                 color: $font-black;
 
-                > header {
-                  font-size: $smallest;
-                  text-align: right;
-                }
-
-                > div.slideshow {
-                  height: 420px;
+                > div {
+                  display: inline-block;
+                  font-size: 7rem;
+                  line-height: 8rem;
                   position: relative;
-                  overflow: hidden;
-
-                  > div {
-                    position: absolute;
-                    background: asset-data-url("portfolio_crawl_v0");
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    width: 3660px;
-                    
-                    -moz-animation: slideshow 42s linear infinite;
-
-                    -webkit-animation: slideshow 42s linear infinite;
-                    -webkit-transform: translate3d(0, 0, 0);
-                  }
-
-                  @-webkit-keyframes slideshow {
-                    0% { 
-                      -webkit-transform: translateX(0);  
-                    } 
-
-                    100% { 
-                      -webkit-transform: translateX(-2720px);  
-                    }
-                  }
-
-                  @-moz-keyframes slideshow {
-                    0% { 
-                      -moz-transform: translateX(0); 
-                    }    
-                      
-                    100% { 
-                      -moz-transform: translateX(-2720px); 
-                    }
-                  }
+                  text-align: center;
+                  width: 100%;
                 }
               }
             }
@@ -117,7 +77,6 @@ body {
               }
 
               > ul {
-
                 > li {
                   padding-bottom: 36px;
 
@@ -126,7 +85,6 @@ body {
                   }
 
                   > section {
-
                     > header {
                       font-size: $largest;
                       font-weight: bold;
@@ -136,13 +94,18 @@ body {
                     }
 
                     > ul {
-
                       > li {
                         padding-bottom: 12px;
 
                         &.emphazie {
                           font-size: $larger;
                           font-style: oblique;
+                          padding: 4px 0 16px;
+                        }
+
+                        &.bold {
+                          font-size: $larger;
+                          font-weight: bold;
                           padding: 4px 0 16px;
                         }
                       }
@@ -166,7 +129,6 @@ body {
                   padding: 21px 0 42px 0;
 
                   > section {
-
                     > header,
                     > footer {
                       text-align: left;
@@ -210,6 +172,13 @@ body {
                 color: $font-white;
               }
             }
+          }
+        }
+
+        @media (max-width: 725px) {
+          > div > ul > li > section > div {
+            font-size: 5rem;
+            line-height: 5.5rem;
           }
         }
       }
