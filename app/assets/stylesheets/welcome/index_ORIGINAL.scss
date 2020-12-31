@@ -1,0 +1,218 @@
+@import "mixins";
+
+body {
+  
+  &.sixmk {
+
+    > section.page-container {
+      
+      &.welcome.index {
+        position: relative;
+
+        > div {
+
+          > ul {
+            background-color: $background-primary;
+            height: 420px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: fixed;
+            top: $header-height;
+            width: 100%;
+            z-index: $z-negative;
+
+            @include site-width;
+
+            > li {
+              display: inline-block;
+              vertical-align: top;
+              width: 100%;
+
+              > section {
+                color: $font-black;
+
+                > header {
+                  font-size: $smallest;
+                  text-align: right;
+                }
+
+                > div.slideshow {
+                  height: 420px;
+                  position: relative;
+                  overflow: hidden;
+
+                  > div {
+                    position: absolute;
+                    background: asset-data-url("portfolio_crawl_v0");
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 3660px;
+                    
+                    -moz-animation: slideshow 42s linear infinite;
+
+                    -webkit-animation: slideshow 42s linear infinite;
+                    -webkit-transform: translate3d(0, 0, 0);
+                  }
+
+                  @-webkit-keyframes slideshow {
+                    0% { 
+                      -webkit-transform: translateX(0);  
+                    } 
+
+                    100% { 
+                      -webkit-transform: translateX(-2720px);  
+                    }
+                  }
+
+                  @-moz-keyframes slideshow {
+                    0% { 
+                      -moz-transform: translateX(0); 
+                    }    
+                      
+                    100% { 
+                      -moz-transform: translateX(-2720px); 
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          > section {
+            background-color: $background-primary;
+            border-top: 1px solid $border-brand;
+            margin-top: 469px;
+            padding-bottom: 42px;
+            width: 100%;
+
+            > section {
+              padding: 20px;
+              min-height: 200px;
+              width: 100%;
+              width: calc(100% - 40px);
+
+              a {
+                color: $font-brand;
+                text-decoration: underline;
+                transition: all 0.2s;
+
+                &:hover {
+                  font-size: $large;
+                }
+              }
+
+              > header,
+              > footer {
+                text-align: right;
+                width: 100%;
+              }
+
+              > header {
+                font-size: $smallest;
+              }
+
+              > footer {
+                font-size: $small;
+              }
+
+              > ul {
+
+                > li {
+                  padding-bottom: 36px;
+
+                  &:last-child {
+                    padding-bottom: 4px;
+                  }
+
+                  > section {
+
+                    > header {
+                      font-size: $largest;
+                      font-weight: bold;
+                      padding-bottom: 16px;
+
+                      @include font-brand;
+                    }
+
+                    > ul {
+
+                      > li {
+                        padding-bottom: 12px;
+
+                        &.emphazie {
+                          font-size: $larger;
+                          font-style: oblique;
+                          padding: 4px 0 16px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.about {
+                background-color: $background-primary;
+              }
+
+              &.how-it-works {
+                background-color: $background-secondary;
+              }
+
+              &.process {
+                background-color: $background-primary;
+
+                > header {
+                  padding: 21px 0 42px 0;
+
+                  > section {
+
+                    > header,
+                    > footer {
+                      text-align: left;
+                    }
+
+                    > header {
+                      font-size: $really-too-big;
+                      padding-bottom: 12px;
+
+                      @include font-brand;
+                    }
+
+                    > footer {
+                      font-size: $large;
+                    }
+                  }
+                }
+
+                > ul {
+                  padding-bottom: 12px;
+
+                  > li {
+                    vertical-align: top;
+
+                    > section {
+                      padding: 0 28px;
+
+                      > header {
+                        color: $font-brand;
+                        font-size: $large;
+
+                        @include font-brand;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.schedule {
+                background-color: $background-black;
+                color: $font-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
