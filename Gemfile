@@ -29,7 +29,7 @@ gem 'jbuilder'
 gem 'gon'
 
 # Use puma as the app server
-gem 'puma', '4.3.6'
+gem 'puma', '4.3.12'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
